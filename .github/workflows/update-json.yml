@@ -1,9 +1,9 @@
-name: Update GitHub Tag Network JSON
+name: Update Tag Network JSON
 
 on:
   schedule:
-    - cron: "0 2 * * *" # Every day at 2 AM UTC
-  workflow_dispatch: # Allows manual trigger from GitHub UI
+    - cron: "0 2 * * *"  # Runs daily at 2 AM UTC
+  workflow_dispatch:     # Allows manual trigger from GitHub UI
 
 jobs:
   update-json:
@@ -13,25 +13,23 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set up Python
+      - name: Set up Python 3.x
         uses: actions/setup-python@v4
         with:
-          python-version: 3.12
+          python-version: '3.x'
 
-      - name: Install requirements (if any)
+      - name: Install dependencies
         run: |
-          pip install requests PyGithub
+          python -m pip install --upgrade pip
+          # Add other dependencies here if your script requires them
 
-      - name: Run script to generate updated JSON
+      - name: Run Python script to update JSON
         run: |
           python github_tags_to_json.py
 
-      - name: Commit and push changes
+      - name: Commit and push updated JSON
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           git add tag_network.json
-          git commit -m "Automated update of tag_network.json"
-          git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          git diff --cached --quiet || (git commit -m "Automated update of tag_network.json" && git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/tjnolan319/network-visualization.git HEAD:main)

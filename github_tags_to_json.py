@@ -1,8 +1,9 @@
+import os
 import requests
 import json
 
 GITHUB_USER = "tjnolan319"
-GITHUB_TOKEN = None  # Optional: paste your GitHub token here
+GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")  # Use env variable for token
 
 HEADERS = {
     "Accept": "application/vnd.github.mercy-preview+json"
@@ -53,4 +54,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

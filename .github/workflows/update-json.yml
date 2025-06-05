@@ -1,9 +1,7 @@
 name: Update Tag Network JSON
 
 on:
-  schedule:
-    - cron: "0 2 * * *" # Every day at 2 AM UTC
-  workflow_dispatch: # Allows manual trigger from GitHub UI
+  workflow_dispatch:
 
 jobs:
   update-json:
@@ -12,23 +10,27 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # needed to detect all changes and avoid shallow clone issues
 
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.x"
+          python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install requests
+        run: pip install -r requirements.txt
 
-      - name: Run tag network script
-        run: python github_tags_to_json.py
+      - name: Run script to update tag_network.json
+        run: python generate_network.py
 
-      - name: Commit and push changes
+      - name: Auto-commit updated JSON
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Automated update of tag_network.json
-          commit_user_name: github-actions[bot]
-          commit_user_email: github-actions[bot]@users.noreply.github.com
+          commit_user_name: tjnolan319
+          commit_user_email: tjnolan319@users.noreply.github.com
           branch: main
-          token: ${{ secrets.GH_PAT }}
+          file_pattern: tag_network.json
+          skip_fetch: false
+          push_options: '--force-with-lease'

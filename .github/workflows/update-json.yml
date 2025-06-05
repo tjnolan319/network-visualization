@@ -34,3 +34,4 @@ jobs:
         commit_user_name: github-actions[bot]
         commit_user_email: github-actions[bot]@users.noreply.github.com
         branch: main
+        token: ${{ secrets.GH_PAT }}

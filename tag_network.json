@@ -1,0 +1,323 @@
+{
+  "nodes": [
+    {
+      "id": "beginner-project"
+    },
+    {
+      "id": "business-intelligence"
+    },
+    {
+      "id": "chi-square-test"
+    },
+    {
+      "id": "csv"
+    },
+    {
+      "id": "data-analysis"
+    },
+    {
+      "id": "data-cleaning"
+    },
+    {
+      "id": "data-science"
+    },
+    {
+      "id": "deepnote"
+    },
+    {
+      "id": "humidity"
+    },
+    {
+      "id": "python"
+    },
+    {
+      "id": "statistics"
+    },
+    {
+      "id": "temperature"
+    },
+    {
+      "id": "visualization"
+    },
+    {
+      "id": "weather"
+    }
+  ],
+  "links": [
+    {
+      "source": "business-intelligence",
+      "target": "chi-square-test",
+      "weight": 1
+    },
+    {
+      "source": "business-intelligence",
+      "target": "data-analysis",
+      "weight": 1
+    },
+    {
+      "source": "business-intelligence",
+      "target": "data-cleaning",
+      "weight": 1
+    },
+    {
+      "source": "business-intelligence",
+      "target": "data-science",
+      "weight": 1
+    },
+    {
+      "source": "business-intelligence",
+      "target": "deepnote",
+      "weight": 1
+    },
+    {
+      "source": "business-intelligence",
+      "target": "python",
+      "weight": 1
+    },
+    {
+      "source": "business-intelligence",
+      "target": "visualization",
+      "weight": 1
+    },
+    {
+      "source": "chi-square-test",
+      "target": "data-analysis",
+      "weight": 1
+    },
+    {
+      "source": "chi-square-test",
+      "target": "data-cleaning",
+      "weight": 1
+    },
+    {
+      "source": "chi-square-test",
+      "target": "data-science",
+      "weight": 1
+    },
+    {
+      "source": "chi-square-test",
+      "target": "deepnote",
+      "weight": 1
+    },
+    {
+      "source": "chi-square-test",
+      "target": "python",
+      "weight": 1
+    },
+    {
+      "source": "chi-square-test",
+      "target": "visualization",
+      "weight": 1
+    },
+    {
+      "source": "data-analysis",
+      "target": "data-cleaning",
+      "weight": 1
+    },
+    {
+      "source": "data-analysis",
+      "target": "data-science",
+      "weight": 1
+    },
+    {
+      "source": "data-analysis",
+      "target": "deepnote",
+      "weight": 1
+    },
+    {
+      "source": "data-analysis",
+      "target": "python",
+      "weight": 2
+    },
+    {
+      "source": "data-analysis",
+      "target": "visualization",
+      "weight": 1
+    },
+    {
+      "source": "data-cleaning",
+      "target": "data-science",
+      "weight": 1
+    },
+    {
+      "source": "data-cleaning",
+      "target": "deepnote",
+      "weight": 1
+    },
+    {
+      "source": "data-cleaning",
+      "target": "python",
+      "weight": 1
+    },
+    {
+      "source": "data-cleaning",
+      "target": "visualization",
+      "weight": 1
+    },
+    {
+      "source": "data-science",
+      "target": "deepnote",
+      "weight": 1
+    },
+    {
+      "source": "data-science",
+      "target": "python",
+      "weight": 1
+    },
+    {
+      "source": "data-science",
+      "target": "visualization",
+      "weight": 1
+    },
+    {
+      "source": "deepnote",
+      "target": "python",
+      "weight": 1
+    },
+    {
+      "source": "deepnote",
+      "target": "visualization",
+      "weight": 1
+    },
+    {
+      "source": "python",
+      "target": "visualization",
+      "weight": 1
+    },
+    {
+      "source": "beginner-project",
+      "target": "csv",
+      "weight": 1
+    },
+    {
+      "source": "beginner-project",
+      "target": "data-analysis",
+      "weight": 1
+    },
+    {
+      "source": "beginner-project",
+      "target": "humidity",
+      "weight": 1
+    },
+    {
+      "source": "beginner-project",
+      "target": "python",
+      "weight": 1
+    },
+    {
+      "source": "beginner-project",
+      "target": "statistics",
+      "weight": 1
+    },
+    {
+      "source": "beginner-project",
+      "target": "temperature",
+      "weight": 1
+    },
+    {
+      "source": "beginner-project",
+      "target": "weather",
+      "weight": 1
+    },
+    {
+      "source": "csv",
+      "target": "data-analysis",
+      "weight": 1
+    },
+    {
+      "source": "csv",
+      "target": "humidity",
+      "weight": 1
+    },
+    {
+      "source": "csv",
+      "target": "python",
+      "weight": 1
+    },
+    {
+      "source": "csv",
+      "target": "statistics",
+      "weight": 1
+    },
+    {
+      "source": "csv",
+      "target": "temperature",
+      "weight": 1
+    },
+    {
+      "source": "csv",
+      "target": "weather",
+      "weight": 1
+    },
+    {
+      "source": "data-analysis",
+      "target": "humidity",
+      "weight": 1
+    },
+    {
+      "source": "data-analysis",
+      "target": "statistics",
+      "weight": 1
+    },
+    {
+      "source": "data-analysis",
+      "target": "temperature",
+      "weight": 1
+    },
+    {
+      "source": "data-analysis",
+      "target": "weather",
+      "weight": 1
+    },
+    {
+      "source": "humidity",
+      "target": "python",
+      "weight": 1
+    },
+    {
+      "source": "humidity",
+      "target": "statistics",
+      "weight": 1
+    },
+    {
+      "source": "humidity",
+      "target": "temperature",
+      "weight": 1
+    },
+    {
+      "source": "humidity",
+      "target": "weather",
+      "weight": 1
+    },
+    {
+      "source": "python",
+      "target": "statistics",
+      "weight": 1
+    },
+    {
+      "source": "python",
+      "target": "temperature",
+      "weight": 1
+    },
+    {
+      "source": "python",
+      "target": "weather",
+      "weight": 1
+    },
+    {
+      "source": "statistics",
+      "target": "temperature",
+      "weight": 1
+    },
+    {
+      "source": "statistics",
+      "target": "weather",
+      "weight": 1
+    },
+    {
+      "source": "temperature",
+      "target": "weather",
+      "weight": 1
+    }
+  ]
+}

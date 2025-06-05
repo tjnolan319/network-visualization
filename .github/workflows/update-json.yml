@@ -22,7 +22,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run script to update tag_network.json
-        run: python generate_network.py
+        run: python github_tags_to_json.py
 
       - name: Auto-commit updated JSON
         uses: stefanzweifel/git-auto-commit-action@v4

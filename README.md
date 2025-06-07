@@ -7,7 +7,7 @@ This project visualizes the relationships between tags used across your GitHub r
 - Fetches tag metadata from your GitHub repositories (via a script)
 - Converts that metadata into a graph structure (`tag_network.json`)
 - Displays the graph using a D3-based network diagram
-- Live preview available in [Framer](https://framer.com), embedded with a dynamic data source
+- Live preview available in [Framer](https://timothynolan.framer.website/), embedded with a dynamic data source
 - Automatically updates on a schedule using GitHub Actions (optional)
 
 ---

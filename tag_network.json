@@ -1,6 +1,9 @@
 {
   "nodes": [
     {
+      "id": "automation"
+    },
+    {
       "id": "beginner-project"
     },
     {
@@ -25,6 +28,9 @@
       "id": "data-science"
     },
     {
+      "id": "data-visualization"
+    },
+    {
       "id": "deepnote"
     },
     {
@@ -32,6 +38,9 @@
     },
     {
       "id": "humidity"
+    },
+    {
+      "id": "network-graph"
     },
     {
       "id": "python"
@@ -188,6 +197,36 @@
     {
       "source": "python",
       "target": "visualization",
+      "weight": 1
+    },
+    {
+      "source": "automation",
+      "target": "data-visualization",
+      "weight": 1
+    },
+    {
+      "source": "automation",
+      "target": "network-graph",
+      "weight": 1
+    },
+    {
+      "source": "automation",
+      "target": "python",
+      "weight": 1
+    },
+    {
+      "source": "data-visualization",
+      "target": "network-graph",
+      "weight": 1
+    },
+    {
+      "source": "data-visualization",
+      "target": "python",
+      "weight": 1
+    },
+    {
+      "source": "network-graph",
+      "target": "python",
       "weight": 1
     },
     {

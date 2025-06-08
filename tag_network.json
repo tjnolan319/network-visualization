@@ -13,9 +13,6 @@
       "id": "chi-square-test"
     },
     {
-      "id": "config"
-    },
-    {
       "id": "csv"
     },
     {
@@ -32,9 +29,6 @@
     },
     {
       "id": "deepnote"
-    },
-    {
-      "id": "github-config"
     },
     {
       "id": "humidity"
@@ -227,11 +221,6 @@
     {
       "source": "network-graph",
       "target": "python",
-      "weight": 1
-    },
-    {
-      "source": "config",
-      "target": "github-config",
       "weight": 1
     },
     {

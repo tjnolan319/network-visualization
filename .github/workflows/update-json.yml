@@ -1,7 +1,9 @@
 name: Update Tag Network JSON
 
 on:
-  workflow_dispatch:
+  workflow_dispatch:     # allows you to run it manually
+  schedule:
+    - cron: "0 6 * * *"  # runs at 6:00 AM UTC = 2:00 AM ET
 
 jobs:
   update-json:
@@ -11,7 +13,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # needed to detect all changes and avoid shallow clone issues
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v4
